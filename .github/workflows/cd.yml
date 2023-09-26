@@ -22,3 +22,8 @@ jobs:
       - name: Run Build Production ( Create Dist Folder )
         run: npm run build
 
+      - name: Upload dist folder artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-production
+          path: dist
